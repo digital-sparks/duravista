@@ -1300,9 +1300,6 @@
     }
   });
 
-  // src/events.js
-  init_live_reload();
-
   // src/shared-utils.js
   init_live_reload();
   var import_air_datepicker = __toESM(require_air_datepicker(), 1);
@@ -1395,21 +1392,5 @@
     };
     return new import_air_datepicker.default(selector, config);
   }
-
-  // src/events.js
-  window.Webflow ||= [];
-  window.Webflow.push(() => {
-    setupComboboxClear();
-    handleLocationFromURL();
-    const datePicker = initializeDatePicker();
-    if (!datePicker)
-      return;
-    handleDateFromURL(datePicker);
-    document.querySelectorAll('[fs-list-element="clear"]:not([fs-list-field="location"])').forEach((button) => {
-      button.addEventListener("click", () => {
-        datePicker.clear();
-      });
-    });
-  });
 })();
-//# sourceMappingURL=events.js.map
+//# sourceMappingURL=shared-utils.js.map

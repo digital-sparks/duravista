@@ -1,0 +1,93 @@
+.air-datepicker {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
+  /* ===== Border Radius ===== */
+  --adp-border-radius: 8px;
+  --adp-cell-border-radius: 8px;
+  --adp-btn-border-radius: 4px;
+  --adp-poiner-border-radius: 2px;
+
+  /* ===== Shadows ===== */
+  --adp-box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
+
+  /* ===== Primary Colors ===== */
+  --adp-background-color: #fff;
+  --adp-color: #4a4a4a;
+  --adp-accent-color: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-accent-color--accent-primary
+  );
+
+  /* ===== Border Colors ===== */
+  --adp-border-color: #dbdbdb;
+  --adp-border-color-inner: #efefef;
+  --adp-border-color-inline: #d7d7d7;
+
+  /* ===== Background Colors - Hover & Active States ===== */
+  --adp-background-color-hover: #f0f0f0;
+  --adp-background-color-active: #eaeaea;
+
+  /* ===== Range Selection Colors ===== */
+  --adp-background-color-in-range: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a10
+  );
+  --adp-background-color-in-range-focused: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+  );
+  --adp-background-color-selected-other-month: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+  );
+  --adp-background-color-selected-other-month-focused: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+  );
+
+  /* ===== Cell Colors ===== */
+  --adp-cell-background-color-hover: var(--adp-background-color-hover);
+  --adp-cell-background-color-selected: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-accent-color--accent-primary
+  );
+  --adp-cell-background-color-selected-hover: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-accent-color--accent-primary
+  );
+  --adp-cell-background-color-in-range: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a10
+  );
+  --adp-cell-background-color-in-range-hover: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+  );
+  --adp-cell-border-color-in-range: var(
+      --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+    )
+    /* ===== Text Colors ===== */ --adp-color-secondary: #9c9c9c;
+  --adp-color-current-date: var(--adp-accent-color);
+  --adp-color-other-month: #dedede;
+  --adp-color-other-month-hover: #c5c5c5;
+  --adp-color-disabled: #aeaeae;
+  --adp-color-disabled-in-range: #939393;
+
+  /* ===== Navigation Colors ===== */
+  --adp-nav-color-secondary: var(--adp-color-secondary);
+  --adp-nav-arrow-color: var(--adp-color-secondary);
+
+  /* ===== Day Name Colors ===== */
+  --adp-day-name-color: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-accent-color--accent-primary
+  );
+  --adp-day-name-color-hover: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+  );
+
+  /* ===== Button Colors ===== */
+  --adp-btn-color: var(--adp-accent-color);
+  --adp-btn-color-hover: var(--adp-color);
+  --adp-btn-background-color-hover: var(
+      --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1759401049737---core-color-tint--accent-primary-a20
+    )
+    --adp-btn-background-color-active: var(--adp-background-color-active);
+
+  /* ===== Time Picker Colors ===== */
+  --adp-time-track-color: #dedede;
+  --adp-time-track-color-hover: #b1b1b1;
+  --adp-time-day-period-color: var(--adp-color-secondary);
+
+  /* ===== Overlay Colors ===== */
+  --adp-overlay-background-color: rgba(0, 0, 0, 0.3);
+}

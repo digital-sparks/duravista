@@ -1,61 +1,31 @@
-import { gsap } from 'gsap';
-import { Observer } from 'gsap/Observer';
-import { SplitText } from 'gsap/SplitText';
-gsap.registerPlugin(Observer, SplitText);
-
-import Swiper from 'swiper';
 import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  Keyboard,
-  Mousewheel,
-  A11y,
-} from 'swiper/modules';
+  setupComboboxClear,
+  handleLocationFromURL,
+  handleDateFromURL,
+  initializeDatePicker,
+} from './shared-utils';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const carousel = new Swiper('.', {
-    modules: [Autoplay, Navigation, Pagination, Scrollbar, Keyboard, Mousewheel, A11y],
-    wrapperClass: '',
-    slideClass: '',
-    slidesPerView: 'auto',
-    speed: 400,
-    spaceBetween: 24,
-    a11y: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 3000,
-    },
-    keyboard: {
-      onlyInViewport: true,
-    },
-    mousewheel: { forceToAxis: true },
-    navigation: {
-      prevEl: '',
-      nextEl: '',
-      navigationDisabledClass: '',
-      disabledClass: '',
-      hiddenClass: '',
-    },
-    pagination: {
-      type: 'bullets',
-      el: '.',
-      bulletClass: '',
-      bulletActiveClass: '',
-      clickable: true,
-    },
-    scrollbar: {
-      el: '.',
-      dragClass: '',
-      draggable: true,
-    },
-    breakpoints: {},
-    on: {
-      beforeInit: (swiper) => {
-        swiper.wrapperEl.style.ColumnGap = 'unset';
-      },
-    },
-  });
+  // Setup common handlers
+  setupComboboxClear();
+  handleLocationFromURL();
+
+  // Initialize date picker with default config
+  const datePicker = initializeDatePicker();
+
+  if (!datePicker) return;
+
+  // Handle date from URL parameters
+  handleDateFromURL(datePicker);
+
+  // Page 1 specific: Search button handler
+  const searchBtn = document.querySelector('#searchBtn');
+  if (searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetLink = e.target.href;
+      window.location.href = targetLink + window.location.search;
+    });
+  }
 });
