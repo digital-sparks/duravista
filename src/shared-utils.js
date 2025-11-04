@@ -34,6 +34,10 @@ function setupComboboxClear() {
       btn.addEventListener('click', () => {
         document.querySelector('[fs-combobox-element="clear"]')?.click();
         document.querySelector('.fs-combobox_fake-reset')?.click();
+        setTimeout(() => {
+          document.querySelector('[fs-combobox-element="text-input"]').blur();
+          document.querySelector('[fs-combobox-element="dropdown"]').trigger('click');
+        }, 1);
       })
     );
 }
