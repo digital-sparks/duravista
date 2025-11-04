@@ -67,13 +67,29 @@ function handleDateFromURL(datePicker) {
   }
 }
 
+let button = {
+  content: 'Legen',
+  className: 'air-datepicker-button',
+  onClick: (dp) => {
+    dp.clear();
+    const startInput = document.querySelector('#date-picker_start');
+    const endInput = document.querySelector('#date-picker_end');
+
+    startInput.value = null;
+    startInput.dispatchEvent(new Event('input', { bubbles: true }));
+
+    endInput.value = null;
+    endInput.dispatchEvent(new Event('input', { bubbles: true }));
+  },
+};
+
 // Default date picker configuration
 function getDefaultDatePickerConfig() {
   return {
     locale: getLocale(),
     firstDay: 1,
     dateFormat: 'd MMM yyyy',
-    buttons: ['clear'],
+    buttons: button, //['clear'],
     multipleDatesSeparator: ' - ',
     range: true,
     minDate: new Date(Date.now() + DATE_MIN_OFFSET_DAYS * 24 * 60 * 60 * 1000),
