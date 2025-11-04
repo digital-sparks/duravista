@@ -47,7 +47,7 @@ function handleLocationFromURL() {
     const input = document.querySelector('[fs-combobox-element="text-input"]');
     if (input) {
       input.value = locationEqual;
-      console.log('Location set from URL:', input.value);
+      // console.log('Location set from URL:', input.value);
     }
   }
 }
@@ -103,7 +103,7 @@ function createDefaultOnSelectHandler() {
 function initializeDatePicker(selector = '#date-picker_input', customConfig = {}) {
   const inputElement = document.querySelector(selector);
   if (!inputElement) {
-    console.warn(`Date picker input element not found: ${selector}`);
+    // console.warn(`Date picker input element not found: ${selector}`);
     return null;
   }
 
